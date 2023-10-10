@@ -932,7 +932,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 1),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_1", "trp_knight_1_1", "trp_knight_2_1", "trp_kingdom_1_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_1", "trp_knight_1_1", "trp_knight_2_1", "trp_kingdom_1_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -962,7 +962,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 2),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_2", "trp_knight_2_1", "trp_knight_3_1", "trp_kingdom_2_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_2", "trp_knight_2_1", "trp_knight_3_1", "trp_kingdom_2_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -992,7 +992,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 3),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_3", "trp_knight_3_1", "trp_knight_4_1", "trp_kingdom_3_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_3", "trp_knight_3_1", "trp_knight_4_1", "trp_kingdom_3_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1022,7 +1022,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 4),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_4", "trp_knight_4_1", "trp_knight_5_1", "trp_kingdom_4_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_4", "trp_knight_4_1", "trp_knight_5_1", "trp_kingdom_4_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_take_a_ship_home_to_{s55}.",
@@ -1052,7 +1052,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 5),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_5", "trp_knight_5_1", "trp_knight_6_1", "trp_kingdom_5_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_5", "trp_knight_5_1", "trp_knight_6_1", "trp_kingdom_5_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_take_a_ship_home_to_{s55}.",
@@ -1082,7 +1082,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 6),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_6", "trp_knight_6_1", "trp_knight_7_1", "trp_kingdom_6_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_6", "trp_knight_6_1", "trp_knight_7_1", "trp_kingdom_6_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1112,7 +1112,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 7),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_7", "trp_knight_7_1", "trp_knight_8_1", "trp_kingdom_7_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_7", "trp_knight_7_1", "trp_knight_8_1", "trp_kingdom_7_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1142,7 +1142,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 8),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_8", "trp_knight_8_1", "trp_knight_9_1", "trp_kingdom_8_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_8", "trp_knight_8_1", "trp_knight_9_1", "trp_kingdom_8_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1172,7 +1172,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 9),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_9", "trp_knight_9_1", "trp_knight_10_1", "trp_kingdom_9_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_9", "trp_knight_9_1", "trp_knight_10_1", "trp_kingdom_9_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1202,7 +1202,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 10),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_10", "trp_knight_10_1", "trp_knight_11_1", "trp_kingdom_10_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_10", "trp_knight_10_1", "trp_knight_11_1", "trp_kingdom_10_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1232,7 +1232,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 11),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_11", "trp_knight_11_1", "trp_knight_12_1", "trp_kingdom_11_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_11", "trp_knight_11_1", "trp_knight_12_1", "trp_kingdom_11_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1262,7 +1262,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 12),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_12", "trp_knight_12_1", "trp_knight_13_1", "trp_kingdom_12_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_12", "trp_knight_12_1", "trp_knight_13_1", "trp_kingdom_12_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1292,7 +1292,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 13),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_13", "trp_knight_13_1", "trp_knight_14_1", "trp_kingdom_13_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_13", "trp_knight_13_1", "trp_knight_14_1", "trp_kingdom_13_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1322,7 +1322,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 14),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_14", "trp_knight_14_1", "trp_knight_15_1", "trp_kingdom_14_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_14", "trp_knight_14_1", "trp_knight_15_1", "trp_kingdom_14_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1352,7 +1352,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 15),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_15", "trp_knight_15_1", "trp_knight_16_1", "trp_kingdom_15_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_15", "trp_knight_15_1", "trp_knight_16_1", "trp_kingdom_15_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1382,7 +1382,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 16),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_16", "trp_knight_16_1", "trp_knight_17_1", "trp_kingdom_16_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_16", "trp_knight_16_1", "trp_knight_17_1", "trp_kingdom_16_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1412,7 +1412,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 17),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_17", "trp_knight_17_1", "trp_knight_18_1", "trp_kingdom_17_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_17", "trp_knight_17_1", "trp_knight_18_1", "trp_kingdom_17_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1442,7 +1442,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 18),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_18", "trp_knight_18_1", "trp_knight_19_1", "trp_kingdom_18_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_18", "trp_knight_18_1", "trp_knight_19_1", "trp_kingdom_18_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1472,7 +1472,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 19),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_19", "trp_knight_19_1", "trp_knight_20_1", "trp_kingdom_19_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_19", "trp_knight_19_1", "trp_knight_20_1", "trp_kingdom_19_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1502,7 +1502,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 20),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_20", "trp_knight_20_1", "trp_knight_21_1", "trp_kingdom_20_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_20", "trp_knight_20_1", "trp_knight_21_1", "trp_kingdom_20_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1532,7 +1532,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 21),
-        (call_script, "script_set_player_prince_init", "fac_papacy", "trp_knight_21_1", "trp_knight_22_1", "trp_pope"),
+        (call_script, "script_cf_set_player_prince_init", "fac_papacy", "trp_knight_21_1", "trp_knight_22_1", "trp_pope"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1562,7 +1562,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 22),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_22", "trp_knight_22_1", "trp_knight_23_1", "trp_kingdom_22_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_22", "trp_knight_22_1", "trp_knight_23_1", "trp_kingdom_22_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1592,7 +1592,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 23),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_23", "trp_knight_23_1", "trp_knight_24_1", "trp_kingdom_23_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_23", "trp_knight_23_1", "trp_knight_24_1", "trp_kingdom_23_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1622,7 +1622,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 24),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_24", "trp_knight_24_1", "trp_knight_25_1", "trp_kingdom_24_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_24", "trp_knight_24_1", "trp_knight_25_1", "trp_kingdom_24_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1652,7 +1652,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 25),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_25", "trp_knight_25_1", "trp_knight_26_1", "trp_kingdom_25_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_25", "trp_knight_25_1", "trp_knight_26_1", "trp_kingdom_25_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1682,7 +1682,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 26),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_26", "trp_knight_26_1", "trp_knight_27_1", "trp_kingdom_26_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_26", "trp_knight_26_1", "trp_knight_27_1", "trp_kingdom_26_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1712,7 +1712,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 27),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_27", "trp_knight_27_1", "trp_knight_28_1", "trp_kingdom_27_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_27", "trp_knight_27_1", "trp_knight_28_1", "trp_kingdom_27_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1742,7 +1742,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 28),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_28", "trp_knight_28_1", "trp_knight_29_1", "trp_kingdom_28_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_28", "trp_knight_28_1", "trp_knight_29_1", "trp_kingdom_28_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1772,7 +1772,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 29),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_29", "trp_knight_29_1", "trp_knight_30_1", "trp_kingdom_29_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_29", "trp_knight_29_1", "trp_knight_30_1", "trp_kingdom_29_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1802,7 +1802,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 30),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_30", "trp_knight_30_1", "trp_knight_31_1", "trp_kingdom_30_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_30", "trp_knight_30_1", "trp_knight_31_1", "trp_kingdom_30_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1832,7 +1832,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 31),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_31", "trp_knight_31_1", "trp_knight_32_1", "trp_kingdom_31_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_31", "trp_knight_31_1", "trp_knight_32_1", "trp_kingdom_31_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1862,7 +1862,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 32),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_32", "trp_knight_32_1", "trp_knight_33_1", "trp_kingdom_32_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_32", "trp_knight_32_1", "trp_knight_33_1", "trp_kingdom_32_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1892,7 +1892,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 33),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_33", "trp_knight_33_1", "trp_knight_34_1", "trp_kingdom_33_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_33", "trp_knight_33_1", "trp_knight_34_1", "trp_kingdom_33_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1922,7 +1922,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 34),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_34", "trp_knight_34_1", "trp_knight_35_1", "trp_kingdom_34_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_34", "trp_knight_34_1", "trp_knight_35_1", "trp_kingdom_34_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1952,7 +1952,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 35),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_35", "trp_knight_35_1", "trp_knight_36_1", "trp_kingdom_35_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_35", "trp_knight_35_1", "trp_knight_36_1", "trp_kingdom_35_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -1982,7 +1982,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 36),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_36", "trp_knight_36_1", "trp_knight_37_1", "trp_kingdom_36_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_36", "trp_knight_36_1", "trp_knight_37_1", "trp_kingdom_36_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2012,7 +2012,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 37),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_37", "trp_knight_37_1", "trp_knight_38_1", "trp_kingdom_37_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_37", "trp_knight_37_1", "trp_knight_38_1", "trp_kingdom_37_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2042,7 +2042,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 38),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_38", "trp_knight_38_1", "trp_knight_39_1", "trp_kingdom_38_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_38", "trp_knight_38_1", "trp_knight_39_1", "trp_kingdom_38_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2072,7 +2072,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 39),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_39", "trp_knight_39_1", "trp_knight_40_1", "trp_kingdom_39_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_39", "trp_knight_39_1", "trp_knight_40_1", "trp_kingdom_39_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2102,7 +2102,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 40),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_40", "trp_knight_40_1", "trp_knight_41_1", "trp_kingdom_40_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_40", "trp_knight_40_1", "trp_knight_41_1", "trp_kingdom_40_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2132,7 +2132,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 41),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_41", "trp_knight_41_1", "trp_knight_42_1", "trp_kingdom_41_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_41", "trp_knight_41_1", "trp_knight_42_1", "trp_kingdom_41_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2162,7 +2162,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_prince", 42),
-        (call_script, "script_set_player_prince_init", "fac_kingdom_42", "trp_knight_42_1", "trp_knight_1_1_wife", "trp_kingdom_42_lord"),
+        (call_script, "script_cf_set_player_prince_init", "fac_kingdom_42", "trp_knight_42_1", "trp_knight_1_1_wife", "trp_kingdom_42_lord"),
         (str_store_party_name, s55, "$kaos_prince_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2192,7 +2192,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 1),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_1", "trp_knight_1_1", "trp_knight_2_1", "trp_kingdom_1_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_1", "trp_knight_1_1", "trp_knight_2_1", "trp_kingdom_1_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2222,7 +2222,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 2),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_2", "trp_knight_2_1", "trp_knight_3_1", "trp_kingdom_2_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_2", "trp_knight_2_1", "trp_knight_3_1", "trp_kingdom_2_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2252,7 +2252,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 3),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_3", "trp_knight_3_1", "trp_knight_4_1", "trp_kingdom_3_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_3", "trp_knight_3_1", "trp_knight_4_1", "trp_kingdom_3_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2282,7 +2282,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 4),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_4", "trp_knight_4_1", "trp_knight_5_1", "trp_kingdom_4_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_4", "trp_knight_4_1", "trp_knight_5_1", "trp_kingdom_4_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_take_a_ship_home_to_{s55}.",
@@ -2312,7 +2312,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 5),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_5", "trp_knight_5_1", "trp_knight_6_1", "trp_kingdom_5_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_5", "trp_knight_5_1", "trp_knight_6_1", "trp_kingdom_5_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_take_a_ship_home_to_{s55}.",
@@ -2342,7 +2342,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 6),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_6", "trp_knight_6_1", "trp_knight_7_1", "trp_kingdom_6_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_6", "trp_knight_6_1", "trp_knight_7_1", "trp_kingdom_6_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2372,7 +2372,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 7),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_7", "trp_knight_7_1", "trp_knight_8_1", "trp_kingdom_7_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_7", "trp_knight_7_1", "trp_knight_8_1", "trp_kingdom_7_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2402,7 +2402,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 8),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_8", "trp_knight_8_1", "trp_knight_9_1", "trp_kingdom_8_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_8", "trp_knight_8_1", "trp_knight_9_1", "trp_kingdom_8_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2432,7 +2432,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 9),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_9", "trp_knight_9_1", "trp_knight_10_1", "trp_kingdom_9_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_9", "trp_knight_9_1", "trp_knight_10_1", "trp_kingdom_9_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2462,7 +2462,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 10),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_10", "trp_knight_10_1", "trp_knight_11_1", "trp_kingdom_10_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_10", "trp_knight_10_1", "trp_knight_11_1", "trp_kingdom_10_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2492,7 +2492,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 11),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_11", "trp_knight_11_1", "trp_knight_12_1", "trp_kingdom_11_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_11", "trp_knight_11_1", "trp_knight_12_1", "trp_kingdom_11_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2522,7 +2522,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 12),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_12", "trp_knight_12_1", "trp_knight_13_1", "trp_kingdom_12_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_12", "trp_knight_12_1", "trp_knight_13_1", "trp_kingdom_12_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2552,7 +2552,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 13),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_13", "trp_knight_13_1", "trp_knight_14_1", "trp_kingdom_13_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_13", "trp_knight_13_1", "trp_knight_14_1", "trp_kingdom_13_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2582,7 +2582,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 14),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_14", "trp_knight_14_1", "trp_knight_15_1", "trp_kingdom_14_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_14", "trp_knight_14_1", "trp_knight_15_1", "trp_kingdom_14_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2612,7 +2612,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 15),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_15", "trp_knight_15_1", "trp_knight_16_1", "trp_kingdom_15_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_15", "trp_knight_15_1", "trp_knight_16_1", "trp_kingdom_15_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2642,7 +2642,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 16),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_16", "trp_knight_16_1", "trp_knight_17_1", "trp_kingdom_16_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_16", "trp_knight_16_1", "trp_knight_17_1", "trp_kingdom_16_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2672,7 +2672,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 17),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_17", "trp_knight_17_1", "trp_knight_18_1", "trp_kingdom_17_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_17", "trp_knight_17_1", "trp_knight_18_1", "trp_kingdom_17_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2702,7 +2702,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 18),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_18", "trp_knight_18_1", "trp_knight_19_1", "trp_kingdom_18_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_18", "trp_knight_18_1", "trp_knight_19_1", "trp_kingdom_18_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2732,7 +2732,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 19),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_19", "trp_knight_19_1", "trp_knight_20_1", "trp_kingdom_19_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_19", "trp_knight_19_1", "trp_knight_20_1", "trp_kingdom_19_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2762,7 +2762,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 20),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_20", "trp_knight_20_1", "trp_knight_21_1", "trp_kingdom_20_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_20", "trp_knight_20_1", "trp_knight_21_1", "trp_kingdom_20_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2792,7 +2792,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 21),
-        (call_script, "script_set_player_vassal_init", "fac_papacy", "trp_knight_21_1", "trp_knight_22_1", "trp_pope"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_papacy", "trp_knight_21_1", "trp_knight_22_1", "trp_pope"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2822,7 +2822,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 22),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_22", "trp_knight_22_1", "trp_knight_23_1", "trp_kingdom_22_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_22", "trp_knight_22_1", "trp_knight_23_1", "trp_kingdom_22_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2852,7 +2852,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 23),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_23", "trp_knight_23_1", "trp_knight_24_1", "trp_kingdom_23_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_23", "trp_knight_23_1", "trp_knight_24_1", "trp_kingdom_23_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2882,7 +2882,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 24),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_24", "trp_knight_24_1", "trp_knight_25_1", "trp_kingdom_24_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_24", "trp_knight_24_1", "trp_knight_25_1", "trp_kingdom_24_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2912,7 +2912,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 25),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_25", "trp_knight_25_1", "trp_knight_26_1", "trp_kingdom_25_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_25", "trp_knight_25_1", "trp_knight_26_1", "trp_kingdom_25_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2942,7 +2942,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 26),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_26", "trp_knight_26_1", "trp_knight_27_1", "trp_kingdom_26_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_26", "trp_knight_26_1", "trp_knight_27_1", "trp_kingdom_26_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -2972,7 +2972,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 27),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_27", "trp_knight_27_1", "trp_knight_28_1", "trp_kingdom_27_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_27", "trp_knight_27_1", "trp_knight_28_1", "trp_kingdom_27_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3002,7 +3002,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 28),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_28", "trp_knight_28_1", "trp_knight_29_1", "trp_kingdom_28_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_28", "trp_knight_28_1", "trp_knight_29_1", "trp_kingdom_28_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3032,7 +3032,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 29),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_29", "trp_knight_29_1", "trp_knight_30_1", "trp_kingdom_29_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_29", "trp_knight_29_1", "trp_knight_30_1", "trp_kingdom_29_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3062,7 +3062,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 30),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_30", "trp_knight_30_1", "trp_knight_31_1", "trp_kingdom_30_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_30", "trp_knight_30_1", "trp_knight_31_1", "trp_kingdom_30_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3092,7 +3092,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 31),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_31", "trp_knight_31_1", "trp_knight_32_1", "trp_kingdom_31_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_31", "trp_knight_31_1", "trp_knight_32_1", "trp_kingdom_31_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3122,7 +3122,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 32),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_32", "trp_knight_32_1", "trp_knight_33_1", "trp_kingdom_32_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_32", "trp_knight_32_1", "trp_knight_33_1", "trp_kingdom_32_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3152,7 +3152,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 33),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_33", "trp_knight_33_1", "trp_knight_34_1", "trp_kingdom_33_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_33", "trp_knight_33_1", "trp_knight_34_1", "trp_kingdom_33_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3182,7 +3182,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 34),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_34", "trp_knight_34_1", "trp_knight_35_1", "trp_kingdom_34_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_34", "trp_knight_34_1", "trp_knight_35_1", "trp_kingdom_34_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3212,7 +3212,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 35),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_35", "trp_knight_35_1", "trp_knight_36_1", "trp_kingdom_35_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_35", "trp_knight_35_1", "trp_knight_36_1", "trp_kingdom_35_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3242,7 +3242,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 36),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_36", "trp_knight_36_1", "trp_knight_37_1", "trp_kingdom_36_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_36", "trp_knight_36_1", "trp_knight_37_1", "trp_kingdom_36_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3272,7 +3272,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 37),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_37", "trp_knight_37_1", "trp_knight_38_1", "trp_kingdom_37_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_37", "trp_knight_37_1", "trp_knight_38_1", "trp_kingdom_37_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3302,7 +3302,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 38),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_38", "trp_knight_38_1", "trp_knight_39_1", "trp_kingdom_38_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_38", "trp_knight_38_1", "trp_knight_39_1", "trp_kingdom_38_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3332,7 +3332,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 39),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_39", "trp_knight_39_1", "trp_knight_40_1", "trp_kingdom_39_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_39", "trp_knight_39_1", "trp_knight_40_1", "trp_kingdom_39_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3362,7 +3362,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 40),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_40", "trp_knight_40_1", "trp_knight_41_1", "trp_kingdom_40_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_40", "trp_knight_40_1", "trp_knight_41_1", "trp_kingdom_40_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3392,7 +3392,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 41),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_41", "trp_knight_41_1", "trp_knight_42_1", "trp_kingdom_41_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_41", "trp_knight_41_1", "trp_knight_42_1", "trp_kingdom_41_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -3422,7 +3422,7 @@ game_menus = [
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_vassal", 42),
-        (call_script, "script_set_player_vassal_init", "fac_kingdom_42", "trp_knight_42_1", "trp_knight_1_1_wife", "trp_kingdom_42_lord"),
+        (call_script, "script_cf_set_player_vassal_init", "fac_kingdom_42", "trp_knight_42_1", "trp_knight_1_1_wife", "trp_kingdom_42_lord"),
         (str_store_party_name, s55, "$kaos_vasal_start"),
       ],
       "You_ride_a_caravan_home_to_{s55}.",
@@ -5990,7 +5990,7 @@ game_menus = [
         (else_try),
           (faction_get_slot, ":var4", ":var1", 11),
         (try_end),
-        (call_script, "script_npc_decision_checklist_faction_ai_alt", ":var4"),
+        (call_script, "script_cf_npc_decision_checklist_faction_ai_alt", ":var4"),
         (assign, ":var5", reg0),
         (str_store_string, s26, s14),
         (faction_get_slot, ":var6", ":var1", 4),
@@ -6138,7 +6138,7 @@ game_menus = [
           (store_faction_of_troop, ":var1", ":var0"),
           (eq, ":var1", "$g_cheat_selected_faction"),
           (faction_get_slot, ":var2", ":var1", 11),
-          (call_script, "script_troop_change_relation_with_troop", ":var0", ":var2", -200),
+          (call_script, "script_cf_troop_change_relation_with_troop", ":var0", ":var2", -200),
         (try_end),
       ]
       ),
@@ -6214,7 +6214,7 @@ game_menus = [
       "{!}Force_rethink.",
       [
         (call_script, "script_init_ai_calculation"),
-        (call_script, "script_decide_faction_ai", "$g_cheat_selected_faction"),
+        (call_script, "script_cf_decide_faction_ai", "$g_cheat_selected_faction"),
         (jump_to_menu, "mnu_faction_orders"),
       ]
       ),
@@ -11452,7 +11452,7 @@ game_menus = [
       (try_begin),
         (neg|faction_slot_eq, "$players_kingdom", 11, "trp_player"),
         (faction_get_slot, ":var2", "$players_kingdom", 11),
-        (call_script, "script_troop_change_relation_with_troop", ":var2", "trp_player", 5),
+        (call_script, "script_cf_troop_change_relation_with_troop", ":var2", "trp_player", 5),
       (try_end),
       (assign, ":var3", 60),
       (try_begin),
@@ -19318,7 +19318,7 @@ game_menus = [
             (troop_slot_eq, ":var0", 2, 2),
             (store_faction_of_troop, ":var1", ":var0"),
             (eq, ":var1", "$g_notification_menu_var1"),
-            (call_script, "script_troop_change_relation_with_troop", ":var0", "trp_player", 5),
+            (call_script, "script_cf_troop_change_relation_with_troop", ":var0", "trp_player", 5),
           (try_end),
           (try_for_parties, ":var2"),
             (store_faction_of_party, ":var1", ":var2"),
@@ -19357,7 +19357,7 @@ game_menus = [
             (neq, ":var7", "$g_notification_menu_var1"),
             (store_relation, ":var8", ":var7", "fac_player_supporters_faction"),
             (set_relation, ":var7", "$g_notification_menu_var1", ":var8"),
-            (call_script, "script_recalculate_ais_for_faction", ":var7"),
+            (call_script, "script_cf_recalculate_ais_for_faction", ":var7"),
           (try_end),
           (assign, "$supported_pretender", 0),
           (assign, "$supported_pretender_old_faction", 0),
@@ -34502,7 +34502,7 @@ game_menus = [
           (neq, ":var8", ":var7"),
           (store_faction_of_troop, ":var9", ":var8"),
           (eq, ":var9", ":var5"),
-          (call_script, "script_troop_change_relation_with_troop", ":var7", ":var8", -100),
+          (call_script, "script_cf_troop_change_relation_with_troop", ":var7", ":var8", -100),
           (str_store_troop_name_link, s1, ":var8"),
           (display_message, "@{s1} lowered relations with king"),
           (val_add, ":var0", 1),
@@ -34519,7 +34519,7 @@ game_menus = [
           (call_script, "script_check_faction_civil_war_requirements", ":var5"),
           (eq, reg0, 1),
           (display_message, "@script initiate civil war called!"),
-          (call_script, "script_initiate_civil_war", ":var5", reg1),
+          (call_script, "script_cf_initiate_civil_war", ":var5", reg1),
         (try_end),
       ]
       ),
@@ -34537,7 +34537,7 @@ game_menus = [
       "Kill_the_current_king_of_player_faction_by_assassination.",
       [
         (faction_get_slot, ":var0", "$players_kingdom", 11),
-        (call_script, "script_kill_lord_assassination", ":var0", 0, "trp_player"),
+        (call_script, "script_cf_kill_lord_assassination", ":var0", 0, "trp_player"),
       ]
       ),
 
@@ -39762,7 +39762,7 @@ game_menus = [
           (eq, ":var1", "$players_kingdom"),
           (troop_set_slot, ":var0", 150, 85),
         (try_end),
-        (call_script, "script_decide_faction_ai", "$players_kingdom"),
+        (call_script, "script_cf_decide_faction_ai", "$players_kingdom"),
       ]
       ),
 
@@ -39776,7 +39776,7 @@ game_menus = [
         (try_end),
         (try_for_range, ":var1", "fac_player_supporters_faction", "fac_kingdoms_end"),
           (faction_slot_eq, ":var1", 21, 0),
-          (call_script, "script_decide_faction_ai", ":var1"),
+          (call_script, "script_cf_decide_faction_ai", ":var1"),
         (try_end),
       ]
       ),

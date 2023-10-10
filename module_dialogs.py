@@ -9,6 +9,7 @@ from header_dialogs import *
 from header_operations import *
 from header_parties import *
 from header_item_modifiers import *
+from header_items import *
 from header_skills import *
 from header_triggers import *
 from header_troops import *
@@ -1444,14 +1445,14 @@ dialogs = [
         (assign, "$g_main_attacker_agent", 0),
         (troop_add_gold, "trp_player", 50),
         (call_script, "script_give_source_troop_random_weapon_to_troop", "trp_player", "$g_cur_belligerent_drunk"),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -1),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -1),
       (else_try),
         (neg|agent_is_alive, "$g_main_attacker_agent"),
         (str_store_string, s9, "str_well_id_say_that_he_started_it_that_entitles_you_to_his_sword_and_purse_i_suppose_have_a_drink_on_the_house_as_i_daresay_youve_saved_a_patron_or_two_a_broken_skull_still_i_hope_he_still_has_a_pulse_its_not_good_for_an_establishment_to_get_a_name_as_a_place_where_men_are_killed"),
         (assign, "$g_main_attacker_agent", 0),
         (troop_add_gold, "trp_player", 50),
         (call_script, "script_give_source_troop_random_weapon_to_troop", "trp_player", "$g_cur_belligerent_drunk"),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
       (try_end),
       (troop_set_slot, "trp_hired_assassin", 12, -1),
     ],
@@ -4920,7 +4921,7 @@ dialogs = [
         (neq, "$supported_pretender", ":var2"),
         (store_faction_of_troop, ":var3", ":var2"),
         (eq, ":var3", "fac_player_supporters_faction"),
-        (call_script, "script_change_troop_faction", ":var2", ":var0"),
+        (call_script, "script_cf_change_troop_faction", ":var2", ":var0"),
       (try_end),
       (troop_set_faction, "$g_talk_troop", "fac_neutral"),
       (faction_set_slot, "fac_player_supporters_faction", 11, "trp_player"),
@@ -5929,7 +5930,7 @@ dialogs = [
       (unlock_achievement, 42),
       (call_script, "script_check_concilio_calradi_achievement"),
       (store_div, ":var16", ":var0", 3),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var16"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var16"),
       (str_store_party_name, s17, "$temp"),
       (store_random_in_range, ":var17", "str_npc_fief_acceptance_commoner_1", "str_npc_fief_acceptance_noble_1"),
       (str_store_string, s5, ":var17"),
@@ -12827,7 +12828,7 @@ dialogs = [
         (call_script, "script_update_faction_notes", ":var2"),
         (call_script, "script_update_faction_notes", "fac_kingdom_23"),
       (try_end),
-      (call_script, "script_player_join_faction", "fac_kingdom_23"),
+      (call_script, "script_cf_player_join_faction", "fac_kingdom_23"),
       (store_current_hours, ":var3"),
       (assign, "$crusade_time", ":var3"),
     ]],
@@ -12847,7 +12848,7 @@ dialogs = [
     "Welcome back, we have heard of your exploits!  You have made us proud.",
     "close_window",
     [
-      (call_script, "script_player_join_faction", "$g_player_crusading"),
+      (call_script, "script_cf_player_join_faction", "$g_player_crusading"),
       (assign, "$g_leave_encounter", 1),
       (assign, "$g_player_crusading", 0),
       (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", 8),
@@ -17187,7 +17188,7 @@ dialogs = [
     [
       (call_script, "script_appoint_faction_marshall", "$players_kingdom", "trp_player"),
       (store_current_hours, ":var0"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
       (assign, "$g_player_faction_last_marshal_appointment", ":var0"),
       (try_begin),
         (faction_slot_eq, "$players_kingdom", 64, 1),
@@ -17219,7 +17220,7 @@ dialogs = [
           (troop_set_slot, ":var0", 154, -1),
         (try_end),
       (try_end),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
     ]],
 
   [repeat_for_troops|plyr|anyone, "minister_change_marshal_choose",
@@ -17250,7 +17251,7 @@ dialogs = [
           (troop_set_slot, ":var2", 154, -1),
         (try_end),
       (try_end),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
     ]],
 
   [plyr|anyone, "minister_change_marshal_choose",
@@ -18061,7 +18062,7 @@ dialogs = [
       (val_add, ":var0", 5),
       (troop_set_slot, "$map_talk_troop", 77, ":var0"),
       (troop_get_slot, ":var1", "$map_talk_troop", 73),
-      (call_script, "script_troop_change_relation_with_troop", "$map_talk_troop", ":var1", -15),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$map_talk_troop", ":var1", -15),
     ]],
 
   [anyone, "companion_personalityclash2_b",
@@ -18126,7 +18127,7 @@ dialogs = [
       (val_add, ":var0", 5),
       (troop_set_slot, "$map_talk_troop", 77, ":var0"),
       (troop_get_slot, ":var1", "$map_talk_troop", 71),
-      (call_script, "script_troop_change_relation_with_troop", "$map_talk_troop", ":var1", -15),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$map_talk_troop", ":var1", -15),
     ]],
 
   [anyone, "companion_personalityclash_b",
@@ -18188,7 +18189,7 @@ dialogs = [
     [
       (assign, "$npc_with_personality_match", 0),
       (troop_get_slot, ":var0", "$map_talk_troop", 75),
-      (call_script, "script_troop_change_relation_with_troop", "$map_talk_troop", ":var0", 15),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$map_talk_troop", ":var0", 15),
     ]],
 
   [anyone, "companion_personalitymatch_b",
@@ -19420,7 +19421,7 @@ dialogs = [
     "close_window",
     [
       (assign, "$g_leave_encounter", 1),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -10),
       (call_script, "script_lord_find_alternative_faction", "$g_talk_troop"),
       (assign, ":var0", reg0),
       (try_begin),
@@ -19430,11 +19431,11 @@ dialogs = [
         (str_store_faction_name, s2, ":var0"),
         (str_store_faction_name, s3, ":var1"),
         (troop_set_slot, "$g_talk_troop", 2, 2),
-        (call_script, "script_change_troop_faction", "$g_talk_troop", ":var0"),
+        (call_script, "script_cf_change_troop_faction", "$g_talk_troop", ":var0"),
         (troop_get_type, reg4, "$g_talk_troop"),
         (display_message, "str_lord_defects_ordinary", 0xFF5050),
       (else_try),
-        (call_script, "script_change_troop_faction", "$g_talk_troop", "fac_outlaws"),
+        (call_script, "script_cf_change_troop_faction", "$g_talk_troop", "fac_outlaws"),
       (try_end),
     ]],
 
@@ -19961,7 +19962,7 @@ dialogs = [
     "Well, in that case, let me tell you something -- with those harsh words, you have removed the scales from my eyes. I would agree that it would not be appropriate for me to marry one such as you. Good day, my lady.",
     "close_window",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -20),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -20),
       (troop_set_slot, "$g_talk_troop", 5, 4),
       (assign, "$g_leave_encounter", 1),
     ]],
@@ -19971,7 +19972,7 @@ dialogs = [
     "Such is your right, my lady. If you ever wished to reconsider, I would be overwhelmed with joy.",
     "close_window",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -5),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -5),
       (troop_set_slot, "$g_talk_troop", 5, 4),
       (assign, "$g_leave_encounter", 1),
     ]],
@@ -19991,7 +19992,7 @@ dialogs = [
     "My lady, it brings my heart great joy to see you again...",
     "lord_start",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
     ]],
 
   [anyone, "start",
@@ -20194,7 +20195,7 @@ dialogs = [
       (val_mul, ":var1", 2),
       (add_xp_as_reward, ":var1"),
       (call_script, "script_change_troop_renown", "trp_player", 3),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 4),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 4),
       (call_script, "script_end_quest", "qst_destroy_bandit_lair"),
       (assign, reg5, ":var0"),
     ]],
@@ -20293,7 +20294,7 @@ dialogs = [
       (assign, "$marriage_dowry", 0),
       (troop_add_gold, "trp_player", "$marriage_dower"),
       (assign, "$marriage_dower", 0),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -3),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -3),
       (assign, "$g_leave_encounter", 1),
     ]],
 
@@ -21195,7 +21196,7 @@ dialogs = [
       (try_begin),
         (ge, ":var0", 20),
         (ge, "$g_time_since_last_talk", 24),
-        (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 1),
+        (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 1),
       (try_end),
       (try_begin),
         (eq, "$g_talk_troop_faction", "fac_kingdom_4"),
@@ -21232,7 +21233,7 @@ dialogs = [
         (party_slot_eq, "$g_encountered_party", 7, "$g_talk_troop"),
         (ge, "$g_time_since_last_talk", 24),
         (ge, "$g_talk_troop_relation", 0),
-        (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 1),
+        (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 1),
       (try_end),
     ]],
 
@@ -21258,7 +21259,7 @@ dialogs = [
       (try_begin),
         (is_between, "$g_talk_troop_relation", 0, 10),
         (ge, "$g_time_since_last_talk", 24),
-        (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 2),
+        (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 2),
       (try_end),
     ]],
 
@@ -21395,7 +21396,7 @@ dialogs = [
     "lord_pretalk",
     [
       (quest_get_slot, ":var0", "qst_intrigue_against_lord", 2),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", ":var0", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", ":var0", -10),
       (call_script, "script_succeed_quest", "qst_intrigue_against_lord"),
     ]],
 
@@ -21405,7 +21406,7 @@ dialogs = [
     "intrigue_quest_state_complaint_failed",
     [
       (call_script, "script_fail_quest", "qst_intrigue_against_lord"),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -5),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -5),
     ]],
 
   [plyr|anyone, "intrigue_quest_state_complaint_failed",
@@ -21427,8 +21428,8 @@ dialogs = [
     "intrigue_quest_state_deflect_blame",
     [
       (quest_get_slot, ":var0", "qst_intrigue_against_lord", 6),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", ":var0", -5),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 4),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", ":var0", -5),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 4),
       (call_script, "script_change_player_honor", -2),
     ]],
 
@@ -21473,7 +21474,7 @@ dialogs = [
     "You heard me. You will {s4}",
     "lord_denounce_3",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -15),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -15),
       (store_div, ":var0", "$g_talk_troop_relation", 10),
       (val_add, ":var0", 1),
       (val_max, ":var0", 1),
@@ -21485,7 +21486,7 @@ dialogs = [
         (eq, ":var2", "$g_talk_troop_faction"),
         (call_script, "script_troop_get_relation_with_troop", ":var1", "$g_talk_troop"),
         (lt, reg0, 15),
-        (call_script, "script_troop_change_relation_with_troop", ":var1", "$g_talk_troop", ":var0"),
+        (call_script, "script_cf_troop_change_relation_with_troop", ":var1", "$g_talk_troop", ":var0"),
       (try_end),
     ]],
 
@@ -21693,7 +21694,7 @@ dialogs = [
     "close_window",
     [
       (assign, "$g_leave_encounter", 1),
-      (call_script, "script_change_troop_faction", "$g_talk_troop", "$players_kingdom"),
+      (call_script, "script_cf_change_troop_faction", "$g_talk_troop", "$players_kingdom"),
       (try_begin),
         (store_relation, ":var0", "$players_kingdom", "$g_talk_troop_faction"),
         (ge, ":var0", 0),
@@ -21706,7 +21707,7 @@ dialogs = [
         (val_sub, ":var1", "fac_player_supporters_faction"),
         (faction_set_slot, "$g_talk_troop_faction", ":var1", 30),
         (faction_get_slot, ":var2", "$g_talk_troop_faction", 11),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", ":var2", -3),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", ":var2", -3),
       (try_end),
       (try_begin),
         (faction_slot_eq, "$players_kingdom", 11, "trp_player"),
@@ -21763,7 +21764,7 @@ dialogs = [
     "Hah! I admire a quick tongue. Perhaps some day I shall remove it, with tongs, to admire it at greater leisure, but today, at least, I shall salute your wit and courage.",
     "lord_pretalk",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 5),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 5),
       (call_script, "script_change_troop_renown", "trp_player", 2),
     ]],
 
@@ -21778,7 +21779,7 @@ dialogs = [
     "I meant no offense, madame.",
     "lord_pretalk",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -2),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -2),
       (call_script, "script_change_troop_renown", "trp_player", 2),
     ]],
 
@@ -21795,7 +21796,7 @@ dialogs = [
     "Are you trying to provoke me? Well, I would have you know that I am under no obligation to duel women, commoners, rebels, or brigands. I could, however, order my men to seize you and horsewhip you. Would you like them to do that?",
     "lord_respond_to_insult_challenge_battle",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
       (call_script, "script_change_troop_renown", "trp_player", 2),
     ]],
 
@@ -21804,7 +21805,7 @@ dialogs = [
     "Are you trying to provoke me? Well, I would have you know that I am under no obligation to duel women, commoners, rebels, or brigands. However, in your case, I would be delighted to make an exception. Are you ready for a lesson in deference to your betters, {varlot/girl}?",
     "lord_respond_to_insult_challenge_duel",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
       (call_script, "script_change_troop_renown", "trp_player", 2),
     ]],
 
@@ -21813,7 +21814,7 @@ dialogs = [
     "Are you trying to provoke me? Well, I would have you know that I am under no obligation to duel women, commoners, rebels, or brigands. You are lucky that I am in a good mood, because I am perfectly within my rights to order my men to seize you and horsewhip you. Now begone -- I have had enough of you.",
     "close_window",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
       (call_script, "script_change_troop_renown", "trp_player", 2),
       (assign, "$g_leave_encounter", 1),
     ]],
@@ -21823,7 +21824,7 @@ dialogs = [
     "I would like to see them try.",
     "lord_respond_to_insult_challenge_battle_confirm",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
       (call_script, "script_change_troop_renown", "trp_player", 3),
     ]],
 
@@ -21856,7 +21857,7 @@ dialogs = [
       (str_store_string, s2, "str_you_intend_to_challenge_s13_to_force_him_to_retract_an_insult"),
       (call_script, "script_start_quest", "qst_duel_avenge_insult", "$g_talk_troop"),
       (quest_set_slot, "qst_duel_avenge_insult", 2, "$g_talk_troop"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
     ]],
 
   [plyr|anyone, "lord_respond_to_insult_challenge_duel",
@@ -21939,8 +21940,8 @@ dialogs = [
     "Ah, well. It sounds like you're in the right, then.",
     "lord_quarrel_intervention_3a",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_other_lord", -20),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_other_lord", -20),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 10),
       (try_begin),
         (faction_slot_eq, "$players_kingdom", 11, "trp_player"),
         (call_script, "script_add_log_entry", 27, "trp_player", "$g_other_lord", "$g_talk_troop", "fac_player_supporters_faction"),
@@ -22003,8 +22004,8 @@ dialogs = [
     "I will not reconcile with {s11}. I know my rights.",
     "lord_pretalk",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -15),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_other_lord", 10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -15),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_other_lord", 10),
       (try_begin),
         (gt, "$players_kingdom", 0),
         (call_script, "script_add_log_entry", 27, "trp_player", "$g_talk_troop", "$g_other_lord", "fac_player_supporters_faction"),
@@ -22020,7 +22021,7 @@ dialogs = [
     "Let it be as though our quarrel never occurred.",
     "lord_pretalk",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "$g_other_lord", 20),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "$g_other_lord", 20),
       (call_script, "script_succeed_quest", "qst_resolve_dispute"),
       (call_script, "script_end_quest", "qst_resolve_dispute"),
       (call_script, "script_change_player_honor", 3),
@@ -22174,7 +22175,7 @@ dialogs = [
     "That is most gracious of you",
     "lord_pretalk",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 3),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 3),
       (troop_set_slot, "trp_player", 154, "$g_talk_troop"),
     ]],
 
@@ -22210,8 +22211,8 @@ dialogs = [
     "lord_pretalk",
     [
       (troop_get_slot, ":var0", "$g_talk_troop", 154),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", ":var0", 2),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", ":var0", 2),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
       (troop_set_slot, "trp_player", 154, ":var0"),
     ]],
 
@@ -22644,7 +22645,7 @@ dialogs = [
     "close_window",
     [
       (call_script, "script_activate_player_faction", "trp_player"),
-      (call_script, "script_change_troop_faction", "$g_talk_troop", "fac_player_supporters_faction"),
+      (call_script, "script_cf_change_troop_faction", "$g_talk_troop", "fac_player_supporters_faction"),
       (assign, "$g_leave_encounter", 1),
     ]],
 
@@ -22684,7 +22685,7 @@ dialogs = [
     "Very well, my husband. Let us ride forth to press your claim! ",
     "close_window",
     [
-      (call_script, "script_change_troop_faction", "$g_talk_troop", "fac_player_supporters_faction"),
+      (call_script, "script_cf_change_troop_faction", "$g_talk_troop", "fac_player_supporters_faction"),
       (call_script, "script_activate_player_faction", "$g_talk_troop"),
       (assign, "$g_leave_encounter", 1),
     ]],
@@ -22944,7 +22945,7 @@ dialogs = [
   [anyone, "lord_recruit_hesitant_persuade",
     [
       (troop_set_slot, "$g_talk_troop", 51, 100),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -1),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -1),
     ],
     "You try my patience. I said that I have nothing to say.",
     "lord_pretalk",
@@ -23571,7 +23572,7 @@ dialogs = [
         (troop_slot_eq, "$g_talk_troop", 53, 3),
         (assign, "$lord_expects_fief", 1),
       (try_end),
-      (call_script, "script_change_troop_faction", "$g_talk_troop", "$players_kingdom"),
+      (call_script, "script_cf_change_troop_faction", "$g_talk_troop", "$players_kingdom"),
       (try_begin),
         (store_relation, ":var1", "$players_kingdom", "$g_talk_troop_faction"),
         (ge, ":var1", 0),
@@ -23584,7 +23585,7 @@ dialogs = [
         (val_sub, ":var2", "fac_player_supporters_faction"),
         (faction_set_slot, "$g_talk_troop_faction", ":var2", 30),
         (faction_get_slot, ":var3", "$g_talk_troop_faction", 11),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", ":var3", -3),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", ":var3", -3),
       (try_end),
       (troop_get_type, reg4, ":var0"),
       (try_begin),
@@ -23656,7 +23657,7 @@ dialogs = [
       (store_sub, ":var0", 0, reg0),
       (val_add, ":var0", 5),
       (val_max, ":var0", 5),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
       (call_script, "script_end_quest", "qst_offer_gift"),
       (assign, "$g_leave_encounter", 1),
     ]],
@@ -23678,7 +23679,7 @@ dialogs = [
       (call_script, "script_troop_get_relation_with_troop", "$g_talk_troop", "trp_player"),
       (store_sub, ":var0", 0, reg0),
       (val_max, ":var0", 2),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
       (call_script, "script_end_quest", "qst_offer_gift"),
       (assign, "$g_leave_encounter", 1),
     ]],
@@ -23742,7 +23743,7 @@ dialogs = [
     [
       (call_script, "script_succeed_quest", "qst_denounce_lord"),
       (call_script, "script_end_quest", "qst_denounce_lord"),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 8),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 8),
       (add_xp_as_reward, 1000),
     ]],
 
@@ -23778,7 +23779,7 @@ dialogs = [
     [
       (call_script, "script_end_quest", "qst_intrigue_against_lord"),
       (quest_set_slot, "qst_intrigue_against_lord", 25, 30),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 8),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 8),
       (add_xp_as_reward, 500),
     ]],
 
@@ -24351,7 +24352,7 @@ dialogs = [
         (neq, ":var0", "$players_oath_renounced_given_center"),
         (call_script, "script_give_center_to_faction", ":var0", "$g_talk_troop_faction"),
       (try_end),
-      (call_script, "script_player_join_faction", "$g_talk_troop_faction"),
+      (call_script, "script_cf_player_join_faction", "$g_talk_troop_faction"),
       (assign, "$player_has_homage", 1),
       (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", 3),
     ]],
@@ -25242,8 +25243,8 @@ dialogs = [
     [
       (assign, "$player_marshal_ai_state", 1),
       (assign, "$player_marshal_ai_object", "p_main_party"),
-      (call_script, "script_decide_faction_ai", "$players_kingdom"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_decide_faction_ai", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
     ]],
 
   [plyr|anyone, "lord_talk",
@@ -25283,8 +25284,8 @@ dialogs = [
     [
       (assign, "$player_marshal_ai_state", 0),
       (assign, "$player_marshal_ai_object", -1),
-      (call_script, "script_decide_faction_ai", "$players_kingdom"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_decide_faction_ai", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
     ]],
 
   [plyr|anyone, "lord_talk",
@@ -26016,7 +26017,7 @@ dialogs = [
     "lord_pretalk",
     [
       (troop_set_slot, "$g_talk_troop", 38, -1),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -1),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -1),
     ]],
 
   [anyone, "lord_courtship_permission",
@@ -26254,7 +26255,7 @@ dialogs = [
         (eq, ":var2", -1),
         (faction_get_slot, ":var2", "$g_encountered_party_faction", 11),
       (try_end),
-      (call_script, "script_npc_decision_checklist_faction_ai_alt", ":var2"),
+      (call_script, "script_cf_npc_decision_checklist_faction_ai_alt", ":var2"),
       (assign, ":var3", reg0),
       (assign, ":var4", reg1),
       (try_begin),
@@ -26324,7 +26325,7 @@ dialogs = [
   [anyone, "lord_strategy_follow_evaluation",
     [
       (faction_slot_eq, "$g_talk_troop_faction", 4, 1),
-      (call_script, "script_npc_decision_checklist_faction_ai_alt", "$g_talk_troop"),
+      (call_script, "script_cf_npc_decision_checklist_faction_ai_alt", "$g_talk_troop"),
       (assign, ":var0", reg0),
       (neq, ":var0", 1),
       (store_current_hours, ":var1"),
@@ -26366,7 +26367,7 @@ dialogs = [
 
   [anyone, "lord_strategy_follow_evaluation",
     [
-      (call_script, "script_npc_decision_checklist_faction_ai_alt", "$g_talk_troop"),
+      (call_script, "script_cf_npc_decision_checklist_faction_ai_alt", "$g_talk_troop"),
       (assign, ":var0", reg0),
       (neg|faction_slot_eq, "$g_talk_troop_faction", 4, ":var0"),
       (assign, ":var1", 1),
@@ -27086,7 +27087,7 @@ dialogs = [
       (troop_get_slot, ":var0", "$g_talk_troop", 11),
       (val_add, ":var0", 1000),
       (troop_set_slot, "$g_talk_troop", 11, ":var0"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
     ]],
 
   [plyr|anyone, "lord_give_money_2",
@@ -27101,7 +27102,7 @@ dialogs = [
       (troop_get_slot, ":var0", "$g_talk_troop", 11),
       (val_add, ":var0", 2000),
       (troop_set_slot, "$g_talk_troop", 11, ":var0"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 4),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 4),
     ]],
 
   [plyr|anyone, "lord_give_money_2",
@@ -27116,7 +27117,7 @@ dialogs = [
       (troop_get_slot, ":var0", "$g_talk_troop", 11),
       (val_add, ":var0", 5000),
       (troop_set_slot, "$g_talk_troop", 11, ":var0"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 8),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 8),
     ]],
 
   [plyr|anyone, "lord_give_money_2",
@@ -27131,7 +27132,7 @@ dialogs = [
       (troop_get_slot, ":var0", "$g_talk_troop", 11),
       (val_add, ":var0", 10000),
       (troop_set_slot, "$g_talk_troop", 11, ":var0"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 15),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 15),
     ]],
 
   [anyone, "lord_give_money_3",
@@ -27363,7 +27364,7 @@ dialogs = [
     "close_window",
     [
       (troop_set_slot, "$g_talk_troop", 78, 1),
-      (call_script, "script_change_troop_faction", "$g_talk_troop", "$players_kingdom"),
+      (call_script, "script_cf_change_troop_faction", "$g_talk_troop", "$players_kingdom"),
       (assign, "$g_leave_encounter", 1),
     ]],
 
@@ -28195,7 +28196,7 @@ dialogs = [
           (store_faction_of_troop, ":var2", ":var1"),
           (eq, ":var2", "fac_player_supporters_faction"),
           (troop_slot_eq, ":var1", 2, 2),
-          (call_script, "script_change_troop_faction", ":var1", "$g_talk_troop_faction"),
+          (call_script, "script_cf_change_troop_faction", ":var1", "$g_talk_troop_faction"),
         (try_end),
       (try_end),
       (try_begin),
@@ -28205,8 +28206,8 @@ dialogs = [
         (val_min, ":var3", -40),
         (call_script, "script_set_player_relation_with_faction", "$players_oath_renounced_against_kingdom", ":var3"),
         (call_script, "script_update_all_notes"),
-        (call_script, "script_recalculate_ais_for_faction", "fac_player_supporters_faction"),
-        (call_script, "script_recalculate_ais_for_faction", "$players_oath_renounced_against_kingdom"),
+        (call_script, "script_cf_recalculate_ais_for_faction", "fac_player_supporters_faction"),
+        (call_script, "script_cf_recalculate_ais_for_faction", "$players_oath_renounced_against_kingdom"),
       (try_end),
       (try_begin),
         (is_between, "$players_kingdom", "fac_player_supporters_faction", "fac_kingdoms_end"),
@@ -28220,7 +28221,7 @@ dialogs = [
         (try_end),
         (call_script, "script_player_leave_faction", 0),
       (try_end),
-      (call_script, "script_player_join_faction", "$g_talk_troop_faction"),
+      (call_script, "script_cf_player_join_faction", "$g_talk_troop_faction"),
       (try_begin),
         (gt, "$g_invite_offered_center", 0),
         (call_script, "script_give_center_to_lord", "$g_invite_offered_center", "trp_player", 0),
@@ -29168,7 +29169,7 @@ dialogs = [
       (try_end),
       (faction_set_slot, "$g_talk_troop_faction", 8, "trp_player"),
       (faction_set_slot, "$g_talk_troop_faction", 4, 0),
-      (call_script, "script_recalculate_ais_for_faction", "$g_talk_troop_faction"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$g_talk_troop_faction"),
     ]],
 
   [plyr|anyone, "lord_suggest_action",
@@ -29592,7 +29593,7 @@ dialogs = [
       (call_script, "script_troop_add_gold", "trp_player", "$temp"),
       (store_current_day, ":var0"),
       (store_add, "$mercenary_service_next_renew_day", ":var0", 14),
-      (call_script, "script_player_join_faction", "$g_talk_troop_faction"),
+      (call_script, "script_cf_player_join_faction", "$g_talk_troop_faction"),
       (str_store_faction_name, s9, "$g_talk_troop_faction"),
       (assign, "$g_player_cur_role", 3),
     ]],
@@ -31393,7 +31394,7 @@ dialogs = [
         (this_or_next|troop_slot_eq, "trp_player", 30, ":var0"),
         (this_or_next|troop_slot_eq, ":var0", 30, "trp_player"),
         (troop_slot_eq, "trp_player", 34, ":var0"),
-        (call_script, "script_troop_change_relation_with_troop", ":var0", "trp_player", -1),
+        (call_script, "script_cf_troop_change_relation_with_troop", ":var0", "trp_player", -1),
       (try_end),
       (try_begin),
         (troop_slot_eq, "$g_talk_troop", 40, 1),
@@ -31410,7 +31411,7 @@ dialogs = [
       (else_try),
         (str_store_string, s9, "str_why_thank_you_you_are_most_kind_to_do_so"),
       (try_end),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", "$g_player_tournament_placement"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", "$g_player_tournament_placement"),
       (assign, "$g_player_tournament_placement", 0),
       (troop_set_slot, "$g_talk_troop", 40, 1),
     ]],
@@ -31641,7 +31642,7 @@ dialogs = [
       (faction_set_slot, "$players_kingdom", 5, "$g_player_court"),
       (assign, "$player_marshal_ai_state", 6),
       (assign, "$player_marshal_ai_object", "$g_player_court"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
       (assign, reg4, 1),
       (try_begin),
         (neq, "$g_encountered_party", "$g_player_court"),
@@ -31848,7 +31849,7 @@ dialogs = [
       (troop_set_slot, "$g_talk_troop", 12, ":var1"),
       (try_begin),
         (neq, ":var0", ":var1"),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
       (try_end),
     ]],
 
@@ -31877,7 +31878,7 @@ dialogs = [
     [
       (troop_set_slot, "$g_talk_troop", 8, "$g_encountered_party"),
       (call_script, "script_change_player_honor", -2),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
     ]],
 
   [plyr|anyone, "kingdom_lady_captive",
@@ -31970,7 +31971,7 @@ dialogs = [
     "lady_start",
     [
       (call_script, "script_end_quest", "qst_duel_courtship_rival"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 3),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 3),
       (add_xp_as_reward, 1000),
     ]],
 
@@ -31989,7 +31990,7 @@ dialogs = [
     "lady_start",
     [
       (call_script, "script_end_quest", "qst_duel_courtship_rival"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
       (add_xp_as_reward, 1000),
     ]],
 
@@ -32014,7 +32015,7 @@ dialogs = [
     "lady_start",
     [
       (call_script, "script_end_quest", "qst_duel_courtship_rival"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
       (add_xp_as_reward, 1000),
     ]],
 
@@ -32038,7 +32039,7 @@ dialogs = [
     "lady_start",
     [
       (call_script, "script_end_quest", "qst_duel_courtship_rival"),
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -2),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -2),
       (add_xp_as_reward, 1000),
     ]],
 
@@ -32801,7 +32802,7 @@ dialogs = [
       (assign, ":var0", reg0),
       (val_div, ":var0", 2),
       (val_max, ":var0", -2),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
       (assign, "$g_time_to_spare", 0),
     ]],
 
@@ -32837,7 +32838,7 @@ dialogs = [
       (else_try),
         (str_store_string, s9, "str_why_thank_you_you_are_most_kind_to_do_so"),
       (try_end),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", "$g_player_tournament_placement"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", "$g_player_tournament_placement"),
       (assign, "$g_player_tournament_placement", 0),
       (troop_set_slot, "$g_talk_troop", 40, 1),
     ]],
@@ -32975,7 +32976,7 @@ dialogs = [
     "lady_private_conversation_end",
     [
       (assign, ":var0", reg0),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", ":var0"),
       (call_script, "script_courtship_poem_reactions", "$g_talk_troop", "$poem_selected"),
     ]],
 
@@ -33149,7 +33150,7 @@ dialogs = [
     "Enough, sir! I shall not be rushed into marriage, with you or with anyone else! You have made me very cross. Please, leave me alone for a while. I shall let you know when I am ready to speak to you again.",
     "close_window",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -1),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", -1),
       (jump_to_menu, "mnu_town"),
       (finish_mission),
     ]],
@@ -33165,7 +33166,7 @@ dialogs = [
     "Oh {playername}, I could never allow that to happen! Oh, if only we could be wed! But my {s11} {s4} would never give his permission... Perhaps it is best that we part...",
     "lady_betrothed",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 5),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 5),
     ]],
 
   [anyone, "lady_proposal_refused_persuade_result",
@@ -33178,7 +33179,7 @@ dialogs = [
     "Oh {playername}, I could never allow that to happen! Go ask my {s11} {s4} his permission for us to be wed!",
     "close_window",
     [
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 5),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 5),
       (call_script, "script_get_kingdom_lady_social_determinants", "$g_talk_troop"),
       (assign, ":var0", reg0),
       (str_store_troop_name, s12, ":var0"),
@@ -33345,7 +33346,7 @@ dialogs = [
     "{s15}",
     "lady_pretalk",
     [
-      (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", "$quarrel_penalty"),
+      (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", "$quarrel_penalty"),
       (str_store_troop_name, s11, "$g_talk_troop"),
       (str_store_troop_name_link, s13, "$romantic_rival"),
       (setup_quest_text, "qst_duel_courtship_rival"),
@@ -35505,7 +35506,7 @@ dialogs = [
     "close_window",
     [
       (call_script, "script_lord_comment_to_s43", "$g_talk_troop", "str_battle_won_default"),
-      (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 1),
+      (call_script, "script_cf_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 1),
     ]],
 
   [anyone, "start",
@@ -42559,17 +42560,17 @@ dialogs = [
         (this_or_next|eq, ":var1", 3),
         (this_or_next|eq, ":var1", 2),
         (eq, ":var1", 5),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", ":var0", -5),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", ":var0", -5),
         (display_message, "@{s1} is angry at you for meddling with his fief!"),
       (else_try),
         (eq, ":var1", 6),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", ":var0", 5),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", ":var0", 5),
         (display_message, "@Your relation with {s1} increases as a result of your donation."),
       (else_try),
         (this_or_next|eq, ":var1", 7),
         (this_or_next|eq, ":var1", 1),
         (eq, ":var1", 4),
-        (call_script, "script_troop_change_relation_with_troop", "trp_player", ":var0", 2),
+        (call_script, "script_cf_troop_change_relation_with_troop", "trp_player", ":var0", 2),
         (display_message, "@Your relation with {s1} increases as a result of your donation."),
       (try_end),
     ]],
@@ -44091,13 +44092,13 @@ dialogs = [
       (assign, "$arena_reward_asked", 1),
     ]],
 
-  [trp_Galeas, "start",
+  [trp_galeas, "start",
     [],
     "Hello {boy/girl}. If you have any prisoners, I will be happy to buy them from you.",
     "galeas_talk",
     []],
 
-  [plyr|trp_Galeas, "galeas_talk",
+  [plyr|trp_galeas, "galeas_talk",
     [
       (store_num_regular_prisoners, reg0),
       (ge, reg0, 1),
@@ -44106,13 +44107,13 @@ dialogs = [
     "galeas_sell_prisoners",
     []],
 
-  [plyr|trp_Galeas, "galeas_talk",
+  [plyr|trp_galeas, "galeas_talk",
     [],
     "Not this time. Good-bye.",
     "close_window",
     []],
 
-  [trp_Galeas, "galeas_sell_prisoners",
+  [trp_galeas, "galeas_sell_prisoners",
     [],
     "Let me see what you have...",
     "galeas_sell_prisoners_2",
@@ -44120,7 +44121,7 @@ dialogs = [
       (change_screen_trade_prisoners),
     ]],
 
-  [trp_Galeas, "galeas_sell_prisoners_2",
+  [trp_galeas, "galeas_sell_prisoners_2",
     [],
     "You take more prisoners, bring them to me. I will pay well.",
     "close_window",
@@ -46632,8 +46633,8 @@ dialogs = [
       (quest_get_slot, ":var0", "qst_organize_feast", 1),
       (assign, "$player_marshal_ai_state", 6),
       (assign, "$player_marshal_ai_object", ":var0"),
-      (call_script, "script_decide_faction_ai", "$players_kingdom"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_decide_faction_ai", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
       (str_store_party_name, s4, ":var0"),
     ]],
 
@@ -46662,8 +46663,8 @@ dialogs = [
     [
       (assign, "$player_marshal_ai_state", 1),
       (assign, "$player_marshal_ai_object", "p_main_party"),
-      (call_script, "script_decide_faction_ai", "$players_kingdom"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_decide_faction_ai", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
     ]],
 
   [anyone, "member_give_order_disband_army_verify",
@@ -46691,8 +46692,8 @@ dialogs = [
     [
       (assign, "$player_marshal_ai_state", 0),
       (assign, "$player_marshal_ai_object", -1),
-      (call_script, "script_decide_faction_ai", "$players_kingdom"),
-      (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+      (call_script, "script_cf_decide_faction_ai", "$players_kingdom"),
+      (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
     ]],
 
   [anyone, "mayor_wealth_comparison_1",

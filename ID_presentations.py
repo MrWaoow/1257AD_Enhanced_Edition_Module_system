@@ -1,4 +1,4 @@
-prsnt_game_start = 0
+prsnt_cf_game_start = 0
 prsnt_game_credits = 1
 prsnt_game_profile_banner_selection = 2
 prsnt_game_custom_battle_designer = 3

@@ -10,6 +10,7 @@ from header_mission_templates import *
 from ID_meshes import *
 from header_operations import *
 from header_triggers import *
+from header_items import *
 from module_constants import *
 import string
 
@@ -22,13 +23,13 @@ import string
 ####################################################################################################################
 
 presentations = [
-  ("game_start", prsntf_read_only, mesh_pic_bandits,
+  ("cf_game_start", prsntf_read_only, mesh_pic_bandits,
   [
     (ti_on_presentation_load,
     [
       (presentation_set_duration, 999999),
       (set_fixed_point_multiplier, 1000),
-      (create_text_overlay, "$g_presentation_credits_obj_1", "@Anno Domini 1257 - Enhanced Edition (a continuation of the original Anno Domini 1257, 1.13 "Angry peasants edition!")", tf_double_space),
+      (create_text_overlay, "$g_presentation_credits_obj_1", "@Anno Domini 1257 - Enhanced Edition \(a continuation of the original Anno Domini 1257, 1.13 \"Angry peasants edition!\"\)", tf_double_space),
       (str_store_string, s23, "str_revision"),
       (create_text_overlay, "$g_presentation_credits_obj_2", "@Enhanced Edition version: {s23}", tf_double_space),
       (position_set_x, pos1, 1300),
@@ -7996,7 +7997,7 @@ presentations = [
             (eq, "$g_presentation_marshall_selection_max_renown_1_troop", "trp_player"),
             (call_script, "script_change_player_relation_with_troop", "$g_presentation_marshall_selection_max_renown_2_troop", -3),
           (try_end),
-          (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),
+          (call_script, "script_cf_recalculate_ais_for_faction", "$players_kingdom"),
           (assign, "$g_presentation_marshall_selection_ended", 1),
           (presentation_set_duration, 0),
         (try_end),
@@ -14336,15 +14337,15 @@ presentations = [
       (else_try),
         (eq, ":var0", "$cstm_customise_troop_save"),
         (try_begin),
-          (call_script, "script_cstm_cf_troop_equipments_are_different", "$cstm_troop_being_customised", ":var2"),
+          (call_script, "script_cf_cstm_cf_troop_equipments_are_different", "$cstm_troop_being_customised", ":var2"),
           (troop_set_slot, "$cstm_troop_being_customised", 503, 1),
         (try_end),
         (try_begin),
-          (call_script, "script_cstm_cf_troop_has_horse", ":var2"),
+          (call_script, "script_cf_cstm_cf_troop_has_horse", ":var2"),
           (troop_set_class, "$cstm_troop_being_customised", 2),
           (troop_set_class, ":var2", 2),
         (else_try),
-          (call_script, "script_cstm_cf_troop_has_bow_or_crossbow", ":var2"),
+          (call_script, "script_cf_cstm_cf_troop_has_bow_or_crossbow", ":var2"),
           (troop_set_class, "$cstm_troop_being_customised", 1),
           (troop_set_class, ":var2", 1),
         (else_try),
@@ -14630,10 +14631,10 @@ presentations = [
       (assign, "$cstm_set_name", reg1),
       (assign, ":var30", "$cstm_name_changed"),
       (try_begin),
-        (call_script, "script_cstm_cf_troop_stats_are_different", "$cstm_troop_being_customised", ":var1"),
+        (call_script, "script_cf_cstm_cf_troop_stats_are_different", "$cstm_troop_being_customised", ":var1"),
         (assign, ":var30", 1),
       (else_try),
-        (call_script, "script_cstm_cf_troop_equipments_are_different", "$cstm_troop_being_customised", ":var1"),
+        (call_script, "script_cf_cstm_cf_troop_equipments_are_different", "$cstm_troop_being_customised", ":var1"),
         (assign, ":var30", 1),
       (try_end),
       (try_begin),
