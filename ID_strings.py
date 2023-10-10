@@ -7765,3 +7765,5 @@ str_pcamp_s0s_camp = 7763
 str_pcamp_soldiers_from_s3 = 7764
 str_pcamp_skill_too_low = 7765
 str_pcamp_s5_cheat_can_do_anyway = 7766
+
+
