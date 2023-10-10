@@ -65,6 +65,7 @@ arf_cyclic                   = 0x10000000
 arf_use_walk_progress        = 0x20000000
 arf_use_stand_progress       = 0x40000000
 arf_use_inv_walk_progress    = 0x80000000
+acf_lock_rotation            = 0x00000800 # lock agent rotation
 
 ##arf_walk = arf_phase_even | arf_cyclic
 

@@ -11,6 +11,7 @@ from header_parties import *
 from header_item_modifiers import *
 from header_skills import *
 from header_triggers import *
+from header_troops import *
 from ID_troops import *
 from ID_party_templates import *
 
@@ -1656,7 +1657,7 @@ dialogs = [
     "close_window",
     []],
 
-  [trp_Ramun_the_slave_trader, "start",
+  [trp_ramun_the_slave_trader, "start",
     [
       (troop_slot_eq, "$g_talk_troop", 80, 0),
     ],
@@ -1664,7 +1665,7 @@ dialogs = [
     "ramun_introduce_1",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_1",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_1",
     [],
     "Forgive me, you look like a trader, but I see none of your merchandise.",
     "ramun_introduce_2",
@@ -1672,91 +1673,91 @@ dialogs = [
       (troop_set_slot, "$g_talk_troop", 80, 1),
     ]],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_1",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_1",
     [],
     "Never mind.",
     "close_window",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_introduce_2",
+  [trp_ramun_the_slave_trader, "ramun_introduce_2",
     [],
     "A trader? Oh, aye, I certainly am that. My merchandise is a bit different from most, however. It has to be fed and watered twice a day and tries to run away if I turn my back.",
     "ramun_introduce_3",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_3",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_3",
     [],
     "Livestock?",
     "ramun_introduce_4",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_introduce_4",
+  [trp_ramun_the_slave_trader, "ramun_introduce_4",
     [],
     "Close enough. I like to call myself the man who keeps every boat on this ocean moving. Boats are driven by oars, you see, and oars need men to pull them or they stop. That's where I come in.",
     "ramun_introduce_5",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_5",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_5",
     [],
     "Galley slaves.",
     "ramun_introduce_6",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_introduce_6",
+  [trp_ramun_the_slave_trader, "ramun_introduce_6",
     [],
     "Now you're catching on! A trading port like this couldn't survive without them. The ships lose a few hands on every voyage, so there's always a high demand. The captains come to me and they pay well.",
     "ramun_introduce_7",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_7",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_7",
     [],
     "Where do the slaves come from?",
     "ramun_introduce_8",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_introduce_8",
+  [trp_ramun_the_slave_trader, "ramun_introduce_8",
     [],
     "Mostly I deal in convicted criminals bought from the authorities. Others are prisoners of war from various nations, brought to me because I offer the best prices. However, on occasion I'll buy from privateers and other . . . 'individuals'. You can't be picky about your suppliers in this line of work. You wouldn't happen to have any prisoners with you, would you?",
     "ramun_introduce_9",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_9",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_9",
     [],
     "Me? ",
     "ramun_introduce_10",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_introduce_10",
+  [trp_ramun_the_slave_trader, "ramun_introduce_10",
     [],
     "Why not? If you intend to set foot outside this town, you're going to cross swords with someone sooner or later. And, God willing, you'll come out on top. Why not make some extra money off the whole thing? Take them alive, bring them back to me, and I'll pay you fifty denars for each head. Don't much care who they are or where they come from.",
     "ramun_introduce_11",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_introduce_11",
+  [plyr|trp_ramun_the_slave_trader, "ramun_introduce_11",
     [],
     "Hmm. I'll think about it.",
     "ramun_introduce_12",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_introduce_12",
+  [trp_ramun_the_slave_trader, "ramun_introduce_12",
     [],
     "Do think about it! There's a lot of silver to be made, no mistake. More than enough for the both of us.",
     "close_window",
     []],
 
-  [trp_Ramun_the_slave_trader, "start",
+  [trp_ramun_the_slave_trader, "start",
     [],
     "Hello, {playername}.",
     "ramun_talk",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_pre_talk",
+  [trp_ramun_the_slave_trader, "ramun_pre_talk",
     [],
     "Anything else?",
     "ramun_talk",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_talk",
+  [plyr|trp_ramun_the_slave_trader, "ramun_talk",
     [
       (store_num_regular_prisoners, reg0),
       (ge, reg0, 1),
@@ -1765,7 +1766,7 @@ dialogs = [
     "ramun_sell_prisoners",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_sell_prisoners",
+  [trp_ramun_the_slave_trader, "ramun_sell_prisoners",
     [],
     "Let me see what you have...",
     "ramun_sell_prisoners_2",
@@ -1773,13 +1774,13 @@ dialogs = [
       (change_screen_trade_prisoners),
     ]],
 
-  [trp_Ramun_the_slave_trader, "ramun_sell_prisoners_2",
+  [trp_ramun_the_slave_trader, "ramun_sell_prisoners_2",
     [],
     "A pleasure doing business with you.",
     "close_window",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_talk",
+  [plyr|trp_ramun_the_slave_trader, "ramun_talk",
     [
       (neg|troop_slot_ge, "$g_talk_troop", 80, 1),
     ],
@@ -1787,7 +1788,7 @@ dialogs = [
     "ramun_ask_about_capturing",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_talk",
+  [plyr|trp_ramun_the_slave_trader, "ramun_talk",
     [
       (troop_slot_ge, "$g_talk_troop", 80, 1),
     ],
@@ -1797,7 +1798,7 @@ dialogs = [
       (troop_set_slot, "$g_talk_troop", 80, 2),
     ]],
 
-  [trp_Ramun_the_slave_trader, "ramun_ask_about_capturing",
+  [trp_ramun_the_slave_trader, "ramun_ask_about_capturing",
     [
       (neg|troop_slot_ge, "$g_talk_troop", 80, 1),
     ],
@@ -1805,25 +1806,25 @@ dialogs = [
     "ramun_have_blunt_weapon",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_have_blunt_weapon",
+  [plyr|trp_ramun_the_slave_trader, "ramun_have_blunt_weapon",
     [],
     "Of course.",
     "ramun_have_blunt_weapon_yes",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_have_blunt_weapon",
+  [plyr|trp_ramun_the_slave_trader, "ramun_have_blunt_weapon",
     [],
     "As a matter of fact, I don't.",
     "ramun_have_blunt_weapon_no",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_have_blunt_weapon_yes",
+  [trp_ramun_the_slave_trader, "ramun_have_blunt_weapon_yes",
     [],
     "Good. Then all you need to do is beat the bugger down with your weapon, and when the fighting's over you clap him in irons. It's a bit different for nobles and such, they tend to be protected enough that it won't matter what kind of weapon you use, but your average rabble-rouser will bleed like a stuck pig if you get him with something sharp. I don't have many requirements in my merchandise, but I do insist they be breathing when I buy them.",
     "ramun_ask_about_capturing_2",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_have_blunt_weapon_no",
+  [trp_ramun_the_slave_trader, "ramun_have_blunt_weapon_no",
     [],
     "No? Heh, well, this must be your lucky day. I've got an old club lying around that I was going to throw away. It a bit battered, but still good enough bash someone until he stops moving. Here, have it.",
     "ramun_have_blunt_weapon_no_2",
@@ -1831,55 +1832,55 @@ dialogs = [
       (troop_add_item, "trp_player", "itm_club", 1),
     ]],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_have_blunt_weapon_no_2",
+  [plyr|trp_ramun_the_slave_trader, "ramun_have_blunt_weapon_no_2",
     [],
     "Thanks, Ramun. Perhaps I may try my hand at it.",
     "ramun_have_blunt_weapon_yes",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_ask_about_capturing",
+  [trp_ramun_the_slave_trader, "ramun_ask_about_capturing",
     [],
     "Alright, I'll try and expain it again in simple terms. The basic rule of taking someone prisoner is knocking him down with a blunt weapon, like a mace or a club, rather than cutting him open with a sword. That way he goes to sleep for a little while rather than bleeding to death, you see? It's a bit different for nobles and such, they tend to be protected enough that it won't matter what kind of weapon you use, but your average rabble-rouser will bleed like a stuck pig if you get him with something sharp.",
     "ramun_ask_about_capturing_2",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_ask_about_capturing_2",
+  [plyr|trp_ramun_the_slave_trader, "ramun_ask_about_capturing_2",
     [],
     "Alright, I think I understand. Anything else?",
     "ramun_ask_about_capturing_3",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_ask_about_capturing_3",
+  [trp_ramun_the_slave_trader, "ramun_ask_about_capturing_3",
     [],
     "Well, it's not as simple as all that. Blunt weapons don't do as much damage as sharp ones, so they won't bring your enemies down as quickly. And trust me, given the chance, most of the scum you run across would just as soon kill you as look at you, so don't expect any courtesy when you pull out a club instead of a sword. Moreover, having to drag prisoners to and fro will slow down your party, which is why some people simply set their prisoners free after the fighting's done. It's madness. How could anyone turn down all that silver, eh?",
     "ramun_ask_about_capturing_4",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_ask_about_capturing_4",
+  [plyr|trp_ramun_the_slave_trader, "ramun_ask_about_capturing_4",
     [],
     "Is that everything?",
     "ramun_ask_about_capturing_5",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_ask_about_capturing_5",
+  [trp_ramun_the_slave_trader, "ramun_ask_about_capturing_5",
     [],
     "Just one final thing. Managing prisoners safely is not an easy thing to do, you could call it a skill in itself. If you want to capture a lot of prisoners, you should try and learn the tricks of it yourself, or you won't be able to hang on to a single man you catch.",
     "ramun_ask_about_capturing_7",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_ask_about_capturing_7",
+  [plyr|trp_ramun_the_slave_trader, "ramun_ask_about_capturing_7",
     [],
     "Thanks, I'll keep it in mind.",
     "ramun_pre_talk",
     []],
 
-  [plyr|trp_Ramun_the_slave_trader, "ramun_talk",
+  [plyr|trp_ramun_the_slave_trader, "ramun_talk",
     [],
     "I'd better be going.",
     "ramun_leave",
     []],
 
-  [trp_Ramun_the_slave_trader, "ramun_leave",
+  [trp_ramun_the_slave_trader, "ramun_leave",
     [],
     "Remember, any prisoners you've got, bring them to me. I'll pay you good silver for every one.",
     "close_window",
@@ -3428,7 +3429,7 @@ dialogs = [
     [
       (eq, "$men_are_pleased", 1),
     ],
-    "Don't worry, we will get to "work" as soon as possible.",
+    "Don't worry, we will get to \"work\" as soon as possible.",
     "close_window",
     []],
 
@@ -3485,7 +3486,7 @@ dialogs = [
 
   [trp_whore, "whore_reply_army",
     [],
-    "Allright handsome, my girlfriends are moving to "greet them", right away.",
+    "Allright handsome, my girlfriends are moving to \"greet them\", right away.",
     "close_window",
     []],
 

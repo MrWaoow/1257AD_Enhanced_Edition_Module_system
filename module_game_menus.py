@@ -10,7 +10,9 @@ from header_items import *
 from header_mission_templates import *
 from header_music import *
 from header_terrain_types import *
+from header_troops import *
 
+from module_parties import *
 from module_constants import *
 
 ####################################################################################################################
